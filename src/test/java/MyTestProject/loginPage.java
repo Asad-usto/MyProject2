@@ -5,10 +5,18 @@ import org.openqa.selenium.WebDriver;
 
 public class loginPage {
 
-    public void login(WebDriver driver)
+    WebDriver driver;
+
+    loginPage(WebDriver driver){
+        this.driver = driver;
+    }
+    By username = new By.ById("j_username");
+    By password = new By.ByName("j_password");
+    By submit = new By.ByName("Submit");
+    public void login()
     {
-        driver.findElement(By.id("j_username")).sendKeys("AsadMumtaz");
-        driver.findElement(By.name("j_password")).sendKeys("10pearls1+");
-        driver.findElement(By.name("Submit")).click();
+        driver.findElement(username).sendKeys("AsadMumtaz");
+        driver.findElement(password).sendKeys("10pearls1+");
+        driver.findElement(submit).click();
     }
 }
