@@ -23,7 +23,8 @@ public class main {
             System.out.println("Found Job Successfully");
             driver.findElement(By.xpath("//*[@id=\'job_Myproject1\']/td[3]/a")).click();
         }
-
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id='tasks']/div[5]/span/a/span[2]")).click();
 // driver.findElement(By.xpath("//*[@id=\'job_Myproject1\']/td[3]/a")).click();
 
 //        Thread.sleep(3000);
